@@ -11,7 +11,12 @@ export class APIDemosPage {
     }
 
     // Locator Input di dalam Dialog
-    get inputName() { return $('#io.appium.android.apis:id/username_edit'); }
-    get inputPassword() { return $('#io.appium.android.apis:id/password_edit'); }
-    get btnOk() { return $('#android:id/button1'); }
+    get inputName() { 
+    return $('id=io.appium.android.apis:id/username_edit'); 
+}
+
+get inputPassword() { 
+    return $('id=io.appium.android.apis:id/password_edit'); 
+}
+    get btnOk() { return $('id=android:id/button1'); }
 }
