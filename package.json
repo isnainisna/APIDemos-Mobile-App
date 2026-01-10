@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run ./wdio.conf.ts",
-    "report:generate": "allure generate allure-results --clean",
-    "report:open": "allure open",
-    "report": "npm run report:generate && npm run report:open"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.ts",
+    "serve": "npx allure serve allure-results"
   },
   "keywords": [],
   "author": "",
