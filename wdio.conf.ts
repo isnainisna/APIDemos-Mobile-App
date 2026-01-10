@@ -55,7 +55,7 @@ export const config: WebdriverIO.Config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
+   capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         "platformName": "Android",
   "appium:automationName": "UiAutomator2",
@@ -63,7 +63,7 @@ export const config: WebdriverIO.Config = {
   "appium:app": "E:/PYTHON/Belajar QA Automation/Mobile-testing-with-appium/apk/ApiDemos-debug.apk",
   "appium:autoGrantPermissions": true,
   "appium:noReset": false,
-  "appium:newCommandTimeout": 300
+  "appium:newCommandTimeout": 300,
     }],
 
     //
@@ -142,7 +142,11 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+     reporters: ['spec', ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false
+    }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
