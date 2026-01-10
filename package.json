@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.ts"
+    "test": "wdio run ./wdio.conf.ts",
+    "report:generate": "allure generate allure-results --clean",
+    "report:open": "allure open",
+    "report": "npm run report:generate && npm run report:open"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "@types/chai": "^5.2.3",
     "@types/node": "^25.0.3",
+    "@wdio/allure-reporter": "^9.23.0",
     "@wdio/appium-service": "^9.23.0",
     "@wdio/cli": "^9.23.0",
     "@wdio/globals": "^9.23.0",
@@ -20,8 +23,11 @@
     "@wdio/mocha-framework": "^9.23.0",
     "@wdio/spec-reporter": "^9.20.0",
     "@wdio/visual-service": "^9.1.0",
+    "allure-commandline": "^2.32.0",
     "appium-uiautomator2-driver": "^6.7.8",
     "chai": "^6.2.2",
-    "expect-webdriverio": "^5.6.1"
+    "expect-webdriverio": "^5.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
   }
 }
