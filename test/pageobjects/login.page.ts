@@ -1,4 +1,4 @@
-// File: test/pageobjects/login.page.ts (atau nama file Page Object kamu)
+// File: test/pageobjects/login.page.ts
 
 export class APIDemosPage {
     // Locator Menu Utama
