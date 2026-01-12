@@ -68,7 +68,7 @@ describe("ApiDemos - Text Entry dialog", async () => {
         await apiDemosAction.clickOkButton();
         await takeScreenshot("3_Klik_Button_OK");
 
-        // 7. Verifikasi dialog tertutup (Opsional tapi bagus untuk automation)
+        // 7. Verifikasi dialog tertutup
         // Jika dialog tertutup, elemen inputName seharusnya sudah tidak ada
         const isDialogClosed = await apiDemosAction.isNameFieldExisting();
         expect(isDialogClosed).to.be.false;
